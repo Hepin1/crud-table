@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student</title>
+</head>
+<style>
+    .a {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aa {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    .ab {
+        margin-top: 10px;
+    }
+
+    table {
+        border-style: solid;
+        padding: 20px;
+        margin: auto;
+        width: 70%;
+    }
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+.ac{
+    margin: 10px;
+}
+</style>
+
+<body>
+    <h1>Student Form</h1>
+    <div class="a">
+        <div class="aa">
+            <label for="fname">FirstName:</label>
+            <label for="lname">LastName:</label>
+            <label for="age">Age:</label>
+        </div>
+        <div class="aa">
+            <input type="text" id="fname" name="fname">
+            <input type="text" id="lname" name="lname">
+            <input type="number" id="age" name="age">
+        </div>
+    </div>
+    <div class="ab">
+        <button onclick="hello()">Send</button>
+    </div>
+    <div class="ac">
+        <input type="text" id="dd" name="search" placeholder="Search...">
+        <button onclick="handleSearch()">Search</button>
+    </div>
+   <div>
+    <button onclick="deleteSelected()">Delete Selected</button>
+   </div>
+    <table>
+        <thead>
+            <tr>
+                <th><label>
+                    <input type="checkbox" onclick="selectcheckboxes()" id="mainCheckbox">
+                    <br>Select all
+                  </label></th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+
+        </tbody>
+    </table>
+    <script src="./crud.js"></script>
+</body>
+
+</html>
